@@ -506,5 +506,9 @@ html, body {
     box-sizing: border-box !important;
   }
 }
+body, #root, .app-container, .App {
+  background-image: none !important;
+  background: #0d192e !important; /* Aapka wahi pyara dark premium blue color */
+}
 }
 
