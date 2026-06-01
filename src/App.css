@@ -460,7 +460,21 @@ margin-bottom: 15px;
   .contact-info, .contact-form {
     width: 100% !important;
     min-width: 100% !important;
+  }/* Poori screen ko tarteeb mein lane ke liye aur side patti khatam karne ke liye */
+html, body {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+@media (max-width: 768px) {
+  /* Hero section ka text screen ke mutabiq fit karne ke liye */
+  .hero {
+    padding: 0 15px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
+}
+
 }
 
 
