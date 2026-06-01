@@ -418,70 +418,93 @@ margin-bottom: 15px;
   margin-bottom: 20px;
   font-size: 17px;
 }
-/* --- MOBILE RESPONSIVE CODE --- */
-@media (max-width: 768px) {
-  /* Navbar adjustments */
-  .navbar {
-    padding: 15px 20px !important;
-    flex-direction: column !important;
-    gap: 15px !important;
-  }
+/* ==========================================
+   COMPLETE MOBILE FIX FOR TAYYABA PORTFOLIO
+   ========================================== */
 
-  .nav-links a {
-    margin-left: 10px !important;
-    margin-right: 10px !important;
-    font-size: 14px !important;
-  }
-
-  /* Hero Section adjustments */
-  .hero h1 {
-    font-size: 32px !important; /* Mobile par heading choti ho jaye */
-    line-height: 1.3 !important;
-    padding: 0 10px !important;
-  }
-
-  .hero p {
-    font-size: 15px !important;
-    padding: 0 15px !important;
-  }
-
-  /* Section Layouts padding fix */
-  .about-section, .projects-section, .contact-section {
-    padding-top: 60px !important;
-    padding-bottom: 40px !important;
-  }
-
-  /* Forms and content wrappers */
-  .contact-content {
-    flex-direction: column !important;
-    gap: 30px !important;
-  }
-
-  .contact-info, .contact-form {
-    width: 100% !important;
-    min-width: 100% !important;
-  }/* Poori screen ko tarteeb mein lane ke liye aur side patti khatam karne ke liye */
+/* 1. Pooray page ki extra width khatam karne ke liye */
 html, body {
+  width: 100% !important;
   max-width: 100% !important;
   overflow-x: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
 }
 
 @media (max-width: 768px) {
-  /* Hero section ka text screen ke mutabiq fit karne ke liye */
-  .hero {
-    padding: 0 15px !important;
+  /* 2. Navbar Fix */
+  .navbar {
+    padding: 15px 10px !important;
+    flex-direction: column !important;
+    gap: 10px !important;
     width: 100% !important;
     box-sizing: border-box !important;
   }
-}
-
-}
-
-
-
-
   
+  .nav-links {
+    display: flex !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+  }
 
+  .nav-links a {
+    margin: 0 5px !important;
+    font-size: 14px !important;
+  }
 
+  /* 3. Hero & Content Wrapper Fix */
+  .hero, .about-section, .projects-section, .contact-section, .footer {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    box-sizing: border-box !important;
+  }
+
+  .hero h1 {
+    font-size: 28px !important;
+    line-height: 1.3 !important;
+  }
+
+  /* 4. Projects Cards Fix */
+  /* Agar cards ek line se bahar ja rahi hain to unko neeche lane ke liye */
+  .projects-grid, .projects-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  .project-card, .portfolio-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 5. Contact Section & Form Fix (Jo screen se bahar ja raha tha) */
+  .contact-content, .contact-container {
+    flex-direction: column !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .contact-info, .contact-form-container, .contact-form {
+    width: 100% !important;
+    min-width: 100% !important; /* Purani min-width ko override karne ke liye */
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 6. Social Buttons Fix (Linkedin / GitHub) */
+  .social-icon, .linkedin-btn, .github-btn {
+    min-width: unset !important; /* Fixed width khatam */
+    width: 45% !important;       /* Dono buttons aamne saamne fit ho skein */
+    display: inline-block !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+}
 }
 
