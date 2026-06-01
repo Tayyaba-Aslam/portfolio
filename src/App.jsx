@@ -106,14 +106,14 @@ function App(){
             </div> 
           </div>
           <div className="contact-form-container">
-            <form className="contact-form" onSubmit={(e)=> e.preventDefault}>
+            <form className="contact-form" action="https://formspree.io/f/xykvqanj" method="POST">
               <div className="form-group">
                 <label>Email</label>
-                <input type="email" placeholder="your email" required ></input>
+                <input type="email" name="email" placeholder="your email" required ></input>
               </div>
               <div className="form-group">
                 <label>Message</label>
-                <textarea row="5" placeholder="your message"required></textarea>
+                <textarea rows="5" name="message" placeholder="your message"required></textarea>
               </div>
               <button type="submit" className="submit-btn">Send Message</button>
             </form>
